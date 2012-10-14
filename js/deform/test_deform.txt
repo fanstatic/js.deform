@@ -1,0 +1,10 @@
+How to use?
+===========
+
+
+You can import ``deform_js`` from ``js.deform`` and ``need``
+it where you want these resources to be included on a page::
+
+  >>> from js.deform import deform_js
+  >>> deform_js.need()
+
