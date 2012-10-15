@@ -18,7 +18,7 @@ Included resources
 
 ``js.deform`` is different from most ``js.`` packages in that it doesn't
 include any resources itself.  It references the resources from ``deform``
-itself instead.  The only resource that is made available from ``js.deform``
+instead.  The only resource that is made available from ``js.deform``
 is ``deform.js``.  All other resources that are part of the ``deform``
 distribution are available separately:
 
@@ -28,3 +28,4 @@ distribution are available separately:
   - jQuery Form (http://pypi.python.org/pypi/js.jquery_form)
   - jquery.maskedinput (http://pypi.python.org/pypi/js.jquery_maskedinput)
   - jquery-maskmoney (http://pypi.python.org/pypi/js.jquery_maskmoney)
+  - TinyMCE (http://pypi.python.org/pypi/js.tinymce)
