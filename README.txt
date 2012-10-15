@@ -1,8 +1,8 @@
 js.deform
-*********
+=========
 
 Introduction
-============
+------------
 
 This library packages `deform`_ for `fanstatic`_.
 
