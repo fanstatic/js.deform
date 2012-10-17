@@ -18,9 +18,9 @@ Included resources
 
 ``js.deform`` is different from most ``js.`` packages in that it doesn't
 include any resources itself.  It references the resources from ``deform``
-instead.  The only resource that is made available from ``js.deform``
-is ``deform.js``.  All other resources that are part of the ``deform``
-distribution are available separately:
+instead.  The only resources that are made available from ``js.deform``
+are ``deform.js``, ``form.css`` and ``beautify.css``.  All other resources
+that are part of the ``deform`` distribution are available separately:
 
   - jQuery (http://pypi.python.org/pypi/js.jquery)
   - jQueryUI (http://pypi.python.org/pypi/js.jqueryui)

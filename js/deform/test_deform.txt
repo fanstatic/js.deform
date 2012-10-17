@@ -1,6 +1,8 @@
 How to use?
 ===========
 
+JS
+--
 
 You can import ``deform_js`` from ``js.deform`` and ``need``
 it where you want these resources to be included on a page::
@@ -8,3 +10,21 @@ it where you want these resources to be included on a page::
   >>> from js.deform import deform_js
   >>> deform_js.need()
 
+CSS
+---
+
+You can import ``deform_css`` from ``js.deform`` and ``need``
+it where you want these resources to be included on a page::
+
+  >>> from js.deform import deform_css
+  >>> deform_css.need()
+
+
+All
+---
+
+You can import ``deform`` from ``js.deform`` and ``need``
+it where you want these resources to be included on a page::
+
+  >>> from js.deform import deform
+  >>> deform.need()

@@ -1,7 +1,13 @@
 CHANGES
 =======
 
+0.9.5-1
+-------
+
+-   Make the CSS resources available separately as well as combined with
+    the JS resource.
+
 0.9.5
-=====
+-----
 
 -   Initial release.
