@@ -19,7 +19,6 @@ it where you want these resources to be included on a page::
   >>> from js.deform import deform_css
   >>> deform_css.need()
 
-
 All
 ---
 
@@ -28,3 +27,80 @@ it where you want these resources to be included on a page::
 
   >>> from js.deform import deform
   >>> deform.need()
+
+Auto-needing Resources
+----------------------
+
+You can avoid needing to manually import and ``need()`` each
+Fanstatic dependency of your ``Deform`` form by use of the ``auto_need``
+function provided in this package. 
+
+  >>> import js.deform
+  >>> import colander
+  >>> import deform
+
+  >>> schema = colander.Schema()
+  >>> form = deform.Form(schema)
+  >>> js.deform.auto_need(form)
+
+By doing the above, any widget requirements - including those of `Deform`
+itself - will be included for Fanstatic.
+
+This function will automatically detect if you have dedicated Fanstatic
+libraries (such as ``js.jquery`` or ``js.jqueryui`` and so forth) installed
+that relate to various widget dependencies. This function
+will use these over the pre-bundled resources that ship with Deform. By
+using these dedicated libraries, you can improve efficiency and code
+portability, especially if you use the libraries elsewhere in your
+application. Depending on the packaging of the given library, your page
+weight is likely to benefit from minified versions being available and
+so forth. For more information see the listing of `Pre-packaged libraries
+<http://www.fanstatic.org/en/latest/libraries.html>`_.
+
+So, you may have a form that requires a ``deform.widget.RichTextWidget``
+for one of its fields.  This type of widget requires resources relating to 
+`TinyMCE`. If you already have ``js.tinymce`` installed and available for
+import in Python, then ``js.deform.auto_need`` will use this.
+If this library, or indeed others you need, aren't present, then Deform's
+defaults will be included for Fanstatic to serve as a fallback. 
+
+This is all best illustrated in the following example.
+
+Initialise Fanstatic so we can see resources being included:
+
+  >>> import fanstatic
+  >>> dummy = fanstatic.init_needed()
+  >>> len(fanstatic.get_needed().resources())
+  0
+
+Create a demonstration schema and form:
+
+  >>> schema = colander.Schema()
+  >>> node = colander.SchemaNode(colander.String(),
+  ...                            widget=deform.widget.RichTextWidget())
+  >>> schema.add(node)
+  >>> form = deform.Form(schema)
+
+Check the form's resource requirements:
+
+  >>> form.get_widget_requirements()
+  [('deform', None), ('tinymce', None)]
+
+Ask ``auto_need`` to include the resources for us:
+
+  >>> js.deform.auto_need(form)
+
+So we can now see the resources that have been included:
+
+  >>> needed = fanstatic.get_needed()
+  >>> needed.resources()
+  [<Resource 'css/beautify.css' in library 'deform'>, <Resource 'css/form.css' in library 'deform'>, <Resource 'jquery.js' in library 'jquery'>, <Resource 'scripts/deform.js' in library 'deform'>, <Resource 'tinymce/jscripts/tiny_mce/tiny_mce.js' in library 'deform'>]
+
+The above resources will automatically be included on your page once
+Fanstatic is configured accordingly. 
+
+As you can see, the resources being included come from Deform. The one
+exception to this is jQuery, which comes from ``js.jquery``, a dependency
+of this library. As mentioned above, if you have other libraries available
+related to widgets on your form, then they will be used over those from 
+Deform.

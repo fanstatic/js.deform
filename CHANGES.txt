@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+0.9.5-2
+-------
+
+-   Add ``auto_need`` method for automatically including Fanstatic resources
+    for a given Deform form instance.
+
 0.9.5-1
 -------
 
