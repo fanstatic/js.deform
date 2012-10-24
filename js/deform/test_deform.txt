@@ -85,3 +85,40 @@ So we can now see the resources that have been included:
 
 The above resources will automatically be included on your page once
 Fanstatic is configured accordingly.
+
+
+Patching deform to automatically need the resources for a widget
+----------------------------------------------------------------
+
+If you don't want to have to call ``auto_need(form)`` for every form
+instance in your application, you can patch deform (e.g. on application
+startup) to automagically ``need()`` everything for you where required.
+
+Let's reinit fanstatic...
+
+  >>> dummy = fanstatic.init_needed()
+  >>> len(fanstatic.get_needed().resources())
+  0
+
+...and patch ``deform`` this time:
+
+  >>> from js.deform import patch_deform
+  >>> patch_deform()
+
+Note that you only have too do this once, e.g on application startup.
+
+Now do the same as above, but without calling auto_need.  Note that
+the ``need()`` calls are not issued before rendering the form.
+
+  >>> schema = colander.Schema()
+  >>> node = colander.SchemaNode(colander.String(),
+  ...                            widget=deform.widget.RichTextWidget())
+  >>> schema.add(node)
+  >>> form = deform.Form(schema)
+  >>> needed = fanstatic.get_needed()
+  >>> needed.resources()
+  []
+  >>> html = form.render()
+  >>> needed = fanstatic.get_needed()
+  >>> needed.resources()
+  [<Resource 'jquery.js' in library 'jquery'>, <Resource 'tiny_mce_src.js' in library 'tinymce'>, <Resource 'scripts/deform.js' in library 'deform'>]
