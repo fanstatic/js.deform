@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+0.9.5-3
+-------
+
+-   Add an includme for easy using in Pyramid projects.
+
+-   Change patching to only patch deform.form.Form instead of individual
+    widgets.
+
 0.9.5-2
 -------
 

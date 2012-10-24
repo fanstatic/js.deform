@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from deform import Form
 from fanstatic import Group
 from fanstatic import Library
 from fanstatic import Resource
@@ -8,7 +9,9 @@ from js.jquery_form import jquery_form
 from js.jquery_maskedinput import jquery_maskedinput
 from js.jquery_maskmoney import jquery_maskmoney
 from js.jquery_timepicker_addon import timepicker
-from js.jqueryui import jqueryui
+from js.jqueryui import ui_autocomplete
+from js.jqueryui import ui_datepicker
+from js.jqueryui import ui_sortable
 from js.tinymce import tinymce
 from pkg_resources import resource_filename
 
@@ -43,7 +46,7 @@ resource_mapping = {
     'jquery.form': jquery_form,
     'jquery.maskMoney': jquery_maskmoney,
     'jquery.maskedinput': jquery_maskedinput,
-    'jqueryui': jqueryui,
+    'jqueryui': [ui_autocomplete, ui_datepicker, ui_sortable, ],
     'tinymce': tinymce,
 }
 
@@ -60,7 +63,26 @@ def auto_need(form):
     requirements = form.get_widget_requirements()
 
     for library, version in requirements:
-        resource_mapping[library].need()
+        resources = resource_mapping[library]
+        if not isinstance(resources, list):
+            resources = [resources]
+        for resource in resources:
+            resource.need()
 
 
-from deform_patches import patch_deform
+def includeme(config=None):
+
+    _marker = object()
+
+    def form_render(self, appstruct=_marker, **kw):
+        if appstruct is not _marker:  # pragma: no cover  (this is copied from deform)
+            kw['appstruct'] = appstruct
+
+        html = super(Form, self).render(**kw)
+        auto_need(self)
+        return html
+
+    def patch_deform():
+        Form.render = form_render
+
+    patch_deform()
