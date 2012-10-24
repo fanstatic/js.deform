@@ -7,6 +7,10 @@ CHANGES
 -   Add ``auto_need`` method for automatically including Fanstatic resources
     for a given Deform form instance.
 
+-   Add ``patch_deform`` function for automagically including Fanstatic
+    resources.  This feature will vanish when deform gets a FormRender
+    event which we can subscribe to.
+
 0.9.5-1
 -------
 
