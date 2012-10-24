@@ -4,7 +4,7 @@ import os
 from setuptools import find_packages
 from setuptools import setup
 
-version = '0.9.5-1'
+version = '0.9.5-2'
 
 
 def read(*rnames):
@@ -37,6 +37,11 @@ setup(
         'deform',
         'fanstatic',
         'js.jquery',
+        'js.jquery_maskedinput',
+        'js.jquery_maskmoney',
+        'js.jquery_timepicker_addon',
+        'js.jqueryui',
+        'js.tinymce',
         'setuptools',
         ],
     entry_points={

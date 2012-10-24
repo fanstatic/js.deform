@@ -29,3 +29,6 @@ deform_beautify_css = Resource(
 deform_css = Group([deform_form_css, deform_beautify_css, ])
 
 deform = Group([deform_css, deform_js, ])
+
+from deform_patches import patch_deform
+patch_deform()
