@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+0.9.5-4
+-------
+
+-   Make all items in resource_mapping a list, so that third party
+    packages (e.g. kotti_tinymce) can append resources.
+
 0.9.5-3
 -------
 

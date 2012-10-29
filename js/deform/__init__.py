@@ -40,14 +40,14 @@ deform_css = Group([deform_form_css, deform_beautify_css, ])
 deform = Group([deform_css, deform_js, ])
 
 resource_mapping = {
-    'datetimepicker': timepicker,
-    'deform': deform,
-    'jquery': jquery,
-    'jquery.form': jquery_form,
-    'jquery.maskMoney': jquery_maskmoney,
-    'jquery.maskedinput': jquery_maskedinput,
+    'datetimepicker': [timepicker, ],
+    'deform': [deform, ],
+    'jquery': [jquery, ],
+    'jquery.form': [jquery_form, ],
+    'jquery.maskMoney': [jquery_maskmoney, ],
+    'jquery.maskedinput': [jquery_maskedinput, ],
     'jqueryui': [ui_autocomplete, ui_datepicker, ui_sortable, ],
-    'tinymce': tinymce,
+    'tinymce': [tinymce, ],
 }
 
 
