@@ -37,6 +37,7 @@ setup(
         'deform',
         'fanstatic',
         'js.jquery',
+        'js.jquery_form',
         'js.jquery_maskedinput',
         'js.jquery_maskmoney',
         'js.jquery_timepicker_addon',
