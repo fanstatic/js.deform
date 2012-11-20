@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+0.9.5-5
+-------
+
+-   Include ``js.jquery_form`` dependency in setup.py (thanks icemac!).
+
 0.9.5-4
 -------
 
