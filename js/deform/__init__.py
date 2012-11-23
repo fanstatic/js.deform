@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from deform import Form
+from deform import Form, ValidationFailure
 from fanstatic import Group
 from fanstatic import Library
 from fanstatic import Resource
@@ -82,7 +82,12 @@ def includeme(config=None):
         auto_need(self)
         return html
 
+    def validationfailure_render(self):
+        auto_need(self.field)
+        return self.field.widget.serialize(self.field, self.cstruct)
+
     def patch_deform():
         Form.render = form_render
+        ValidationFailure.render = validationfailure_render
 
     patch_deform()
