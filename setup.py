@@ -26,7 +26,7 @@ setup(
     keywords='',
     author='Andreas Kaiser',
     author_email='disko@binary-punks.com',
-    url='https://github.com/disko/js.deform',
+    url='https://github.com/Kotti/js.deform',
     license='BSD',
     packages=find_packages(),
     namespace_packages=['js'],

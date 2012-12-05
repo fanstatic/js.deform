@@ -64,7 +64,7 @@ def auto_need(form):
 
     for library, version in requirements:
         resources = resource_mapping[library]
-        if not isinstance(resources, list):
+        if not isinstance(resources, list):  # pragma: no cover (bw compat only)
             resources = [resources]
         for resource in resources:
             resource.need()
@@ -75,18 +75,23 @@ def includeme(config=None):
     _marker = object()
 
     def form_render(self, appstruct=_marker, **kw):
-        if appstruct is not _marker:  # pragma: no cover  (this is copied from deform)
+
+        if appstruct is not _marker:  # pragma: no cover  (copied from deform)
             kw['appstruct'] = appstruct
 
         html = super(Form, self).render(**kw)
         auto_need(self)
+
         return html
 
     def validationfailure_render(self):
+
         auto_need(self.field)
+
         return self.field.widget.serialize(self.field, self.cstruct)
 
     def patch_deform():
+
         Form.render = form_render
         ValidationFailure.render = validationfailure_render
 
