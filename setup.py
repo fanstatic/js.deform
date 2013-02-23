@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
 import os
+
 from setuptools import find_packages
 from setuptools import setup
 
-version = '0.9.6dev'
+version = '0.9.6'
 
 
 def read(*rnames):
@@ -13,7 +14,7 @@ def read(*rnames):
 long_description = (
     read('README.txt')
     + '\n' +
-    read('js', 'deform', 'test_deform.txt')
+    read('js', 'deform', 'tests', 'test_deform.txt')
     + '\n' +
     read('CHANGES.txt'))
 
