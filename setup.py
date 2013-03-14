@@ -5,7 +5,7 @@ import os
 from setuptools import find_packages
 from setuptools import setup
 
-version = '0.9.6'
+version = '0.9.7'
 
 
 def read(*rnames):
@@ -45,10 +45,10 @@ setup(
         'js.jqueryui',
         'js.tinymce',
         'setuptools',
-        ],
+    ],
     entry_points={
         'fanstatic.libraries': [
             'deform = js.deform:library',
-            ],
-        },
-    )
+        ],
+    },
+)

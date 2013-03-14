@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+0.9.7 - 2013-03-14
+------------------
+
+- Add ``deform_basic`` to the available resource groupings. Using this
+  includes just the basic CSS and JavaScript, without the 'beautify' CSS.
+  [davidjb]
+
 0.9.6 - 2013-02-23
 ------------------
 
