@@ -37,6 +37,7 @@ deform_beautify_css = Resource(
 
 deform_css = Group([deform_form_css, deform_beautify_css, ])
 
+deform_basic = Group([deform_form_css, deform_js, ])
 deform = Group([deform_css, deform_js, ])
 
 resource_mapping = {
