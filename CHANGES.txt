@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+deform2 branch - unrelease
+--------------------------
+
+- Update for deform2 (branch of deform)
+
 0.9.8 - unreleased
 ------------------
 

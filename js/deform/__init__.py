@@ -8,10 +8,6 @@ from js.jquery import jquery
 from js.jquery_form import jquery_form
 from js.jquery_maskedinput import jquery_maskedinput
 from js.jquery_maskmoney import jquery_maskmoney
-from js.jquery_timepicker_addon import timepicker
-from js.jqueryui import ui_autocomplete
-from js.jqueryui import ui_datepicker
-from js.jqueryui import ui_sortable
 from js.tinymce import tinymce
 from pkg_resources import resource_filename
 
@@ -26,29 +22,84 @@ library = Library(
 deform_js = Resource(
     library,
     "scripts/deform.js",
-    depends=[jquery])
+    depends=[jquery, jquery_form])
 
-deform_form_css = Resource(
-    library,
-    "css/form.css")
-deform_beautify_css = Resource(
-    library,
-    "css/beautify.css")
+# XXX: I'm pretty sure these are no longer used/required
+#deform_form_css = Resource(
+#    library,
+#    "css/form.css")
+#deform_beautify_css = Resource(
+#    library,
+#    "css/beautify.css")
 
-deform_css = Group([deform_form_css, deform_beautify_css, ])
+#deform_css = Group([deform_form_css, deform_beautify_css, ])
+#deform_basic = Group([deform_form_css, deform_js, ])
+#deform = Group([deform_css, deform_js, ])
 
-deform_basic = Group([deform_form_css, deform_js, ])
-deform = Group([deform_css, deform_js, ])
+sortable_js = Resource(
+    library, "scripts/jquery-sortable.js")
 
+# XXX: There is a js.typeahead package, but it does not install on
+# py2.6 (and it is currently one version of typeahead behind)
+typeahead_js = Resource(
+    library, "scripts/typeahead.min.js")
+typeahead_css = Resource(
+    library, "css/typeahead.css")
+
+modernizr_js = Resource(
+    library, "scripts/modernizr.custom.input-types-and-atts.js")
+
+# XXX: Not sure these dependencies are right...
+pickadate_base_css = Resource(
+    library, "pickadate/themes/default.css")
+pickadate_date_css = Resource(
+    library, "pickadate/themes/default.date.css",
+    depends=[pickadate_css])
+pickadate_time_css = Resource(
+    library, "pickadate/themes/default.time.css",
+    depends=[pickadate_css])
+pickadate_legacy_js = Resource(
+    library, "pickadate/legacy.js")
+pickadate_picker_js = Resource(
+    library, "pickadate/picker.js")
+pickadate_picker_date_js = Resource(
+    library, "pickadate/picker.date.js",
+    depends=[pickadate_picker_js])
+pickadate_picker_time_js = Resource(
+    library, "pickadate/picker.time.js",
+    depends=[pickadate_picker_js])
+
+pickadate_css = Group([
+    pickadate_date_css,
+    pickadate_time_css,
+    ])
+pickadate_js = Group([
+    pickadate_legacy_js,
+    pickadate_date_js,
+    pickadate_time_js,
+    ])
+#deform_basic = Group([deform_form_css, deform_js, ])
+#deform = Group([deform_css, deform_js, ])
+
+
+# XXX: use js.select2?
+select2_css = Resource(library, "select2/select2.css")
+select2_js = Resource(library, "select2/select2.js")
+
+# XXX: 'jquery' is no longer listed in deform.widget.default_resources
 resource_mapping = {
-    'datetimepicker': [timepicker, ],
-    'deform': [deform, ],
+    'deform': [deform_js, ],
     'jquery': [jquery, ],
     'jquery.form': [jquery_form, ],
     'jquery.maskMoney': [jquery_maskmoney, ],
     'jquery.maskedinput': [jquery_maskedinput, ],
-    'jqueryui': [ui_autocomplete, ui_datepicker, ui_sortable, ],
     'tinymce': [tinymce, ],
+
+    'sortable': [sortable_js, ],
+    'typeahead': [typeahead_js, typeahead_css, ],
+    'modernizr': [modernizr_js, ],
+    'pickadate': [pickadate_css, pickadate_js],
+    'select2': [select2_css, select2_js, ],
 }
 
 
