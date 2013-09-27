@@ -54,10 +54,10 @@ pickadate_base_css = Resource(
     library, "pickadate/themes/default.css")
 pickadate_date_css = Resource(
     library, "pickadate/themes/default.date.css",
-    depends=[pickadate_css])
+    depends=[pickadate_base_css])
 pickadate_time_css = Resource(
     library, "pickadate/themes/default.time.css",
-    depends=[pickadate_css])
+    depends=[pickadate_base_css])
 pickadate_legacy_js = Resource(
     library, "pickadate/legacy.js")
 pickadate_picker_js = Resource(
@@ -75,12 +75,9 @@ pickadate_css = Group([
     ])
 pickadate_js = Group([
     pickadate_legacy_js,
-    pickadate_date_js,
-    pickadate_time_js,
+    pickadate_picker_date_js,
+    pickadate_picker_time_js,
     ])
-#deform_basic = Group([deform_form_css, deform_js, ])
-#deform = Group([deform_css, deform_js, ])
-
 
 # XXX: use js.select2?
 select2_css = Resource(library, "select2/select2.css")
