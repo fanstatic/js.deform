@@ -8,7 +8,8 @@ from js.jquery import jquery
 from js.jquery_form import jquery_form
 from js.jquery_maskedinput import jquery_maskedinput
 from js.jquery_maskmoney import jquery_maskmoney
-from js.tinymce import tinymce
+# This is stale (4.0.2), use tinymce from deform (4.0.6) for now
+#from js.tinymce import tinymce
 from pkg_resources import resource_filename
 
 
@@ -35,6 +36,9 @@ deform_js = Resource(
 #deform_css = Group([deform_form_css, deform_beautify_css, ])
 #deform_basic = Group([deform_form_css, deform_js, ])
 #deform = Group([deform_css, deform_js, ])
+
+tinymce = Resource(
+    library, "tinymce/tinymce.min.js")
 
 sortable_js = Resource(
     library, "scripts/jquery-sortable.js")

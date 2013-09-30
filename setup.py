@@ -41,7 +41,7 @@ setup(
         'js.jquery_form',
         'js.jquery_maskedinput',
         'js.jquery_maskmoney',
-        'js.tinymce',
+        #'js.tinymce',
         'setuptools',
     ],
     entry_points={
