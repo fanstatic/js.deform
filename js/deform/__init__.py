@@ -25,16 +25,17 @@ deform_js = Resource(
     "scripts/deform.js",
     depends=[jquery, jquery_form])
 
-# XXX: I'm pretty sure these are no longer used/required
-#deform_form_css = Resource(
-#    library,
-#    "css/form.css")
+deform_form_css = Resource(
+    library,
+    "css/form.css")
+
+# XXX: I'm pretty sure this are no longer used/required
 #deform_beautify_css = Resource(
 #    library,
 #    "css/beautify.css")
 
 #deform_css = Group([deform_form_css, deform_beautify_css, ])
-#deform_basic = Group([deform_form_css, deform_js, ])
+deform_basic = Group([deform_form_css, deform_js, ])
 #deform = Group([deform_css, deform_js, ])
 
 tinymce = Resource(
@@ -89,7 +90,7 @@ select2_js = Resource(library, "select2/select2.js")
 
 # XXX: 'jquery' is no longer listed in deform.widget.default_resources
 resource_mapping = {
-    'deform': [deform_js, ],
+    'deform': [deform_basic, ],
     'jquery': [jquery, ],
     'jquery.form': [jquery_form, ],
     'jquery.maskMoney': [jquery_maskmoney, ],
