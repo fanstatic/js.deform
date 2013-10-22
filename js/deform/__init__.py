@@ -94,7 +94,7 @@ select2_js = Resource(library, "select2/select2.js",
 
 # XXX: 'jquery' is no longer listed in deform.widget.default_resources
 resource_mapping = {
-    'deform': [deform_basic, ],
+    'deform': [jquery_form, deform_basic, ],
     'jquery': [jquery, ],
     'jquery.form': [jquery_form, ],
     'jquery.maskMoney': [jquery_maskmoney, ],
