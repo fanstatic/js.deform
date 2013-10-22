@@ -35,15 +35,13 @@ setup(
     zip_safe=False,
     setup_requires=[],
     install_requires=[
-        'deform',
+        'deform >= 2.0dev',
         'fanstatic',
         'js.jquery',
         'js.jquery_form',
         'js.jquery_maskedinput',
         'js.jquery_maskmoney',
-        'js.jquery_timepicker_addon',
-        'js.jqueryui',
-        'js.tinymce',
+        #'js.tinymce',
         'setuptools',
     ],
     entry_points={
