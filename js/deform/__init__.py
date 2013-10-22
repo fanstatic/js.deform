@@ -29,7 +29,7 @@ deform_form_css = Resource(
     library,
     "css/form.css")
 
-# XXX: I'm pretty sure this are no longer used/required
+# XXX: I'm pretty sure this are is longer used/required
 #deform_beautify_css = Resource(
 #    library,
 #    "css/beautify.css")
@@ -42,12 +42,14 @@ tinymce = Resource(
     library, "tinymce/tinymce.min.js")
 
 sortable_js = Resource(
-    library, "scripts/jquery-sortable.js")
+    library, "scripts/jquery-sortable.js",
+    depends=[jquery])
 
 # XXX: There is a js.typeahead package, but it does not install on
 # py2.6 (and it is currently one version of typeahead behind)
 typeahead_js = Resource(
-    library, "scripts/typeahead.min.js")
+    library, "scripts/typeahead.min.js",
+    depends=[jquery])
 typeahead_css = Resource(
     library, "css/typeahead.css")
 
@@ -66,7 +68,8 @@ pickadate_time_css = Resource(
 pickadate_legacy_js = Resource(
     library, "pickadate/legacy.js")
 pickadate_picker_js = Resource(
-    library, "pickadate/picker.js")
+    library, "pickadate/picker.js",
+    depends=[jquery])
 pickadate_picker_date_js = Resource(
     library, "pickadate/picker.date.js",
     depends=[pickadate_picker_js])
@@ -86,7 +89,8 @@ pickadate_js = Group([
 
 # XXX: use js.select2?
 select2_css = Resource(library, "select2/select2.css")
-select2_js = Resource(library, "select2/select2.js")
+select2_js = Resource(library, "select2/select2.js",
+                      depends=[jquery])
 
 # XXX: 'jquery' is no longer listed in deform.widget.default_resources
 resource_mapping = {
