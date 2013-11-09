@@ -12,6 +12,7 @@ from js.jquery_timepicker_addon import timepicker
 from js.jqueryui import ui_autocomplete
 from js.jqueryui import ui_datepicker
 from js.jqueryui import ui_sortable
+from js.modernizr import modernizr
 from js.tinymce import tinymce
 from pkg_resources import resource_filename
 
@@ -43,6 +44,7 @@ deform = Group([deform_css, deform_js, ])
 resource_mapping = {
     'datetimepicker': [timepicker, ],
     'deform': [deform, ],
+    'modernizr': [modernizr, ],
     'jquery': [jquery, ],
     'jquery.form': [jquery_form, ],
     'jquery.maskMoney': [jquery_maskmoney, ],
