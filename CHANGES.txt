@@ -4,7 +4,8 @@ CHANGES
 0.9.8 - unreleased
 ------------------
 
--   No changes.
+-   Resolve ``modernizr`` dependency with js.modernizr; this was introduced
+    in deform-0.9.6.
 
 0.9.7 - 2013-03-14
 ------------------

@@ -43,6 +43,7 @@ setup(
         'js.jquery_maskmoney',
         'js.jquery_timepicker_addon',
         'js.jqueryui',
+        'js.modernizr',
         'js.tinymce',
         'setuptools',
     ],
