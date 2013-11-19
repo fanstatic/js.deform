@@ -1,7 +1,7 @@
 CHANGES
 =======
 
-0.9.8 - unreleased
+0.9.8 - 2013-11-19
 ------------------
 
 -   Resolve ``modernizr`` dependency with js.modernizr; this was introduced
