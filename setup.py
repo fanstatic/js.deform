@@ -5,7 +5,7 @@ import os
 from setuptools import find_packages
 from setuptools import setup
 
-version = '0.9.7'
+version = '0.9.8'
 
 
 def read(*rnames):
@@ -43,6 +43,7 @@ setup(
         'js.jquery_maskmoney',
         'js.jquery_timepicker_addon',
         'js.jqueryui',
+        'js.modernizr',
         'js.tinymce',
         'setuptools',
     ],
