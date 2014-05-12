@@ -5,7 +5,7 @@ import os
 from setuptools import find_packages
 from setuptools import setup
 
-version = '0.9.8'
+version = '2.0a2dev'
 
 
 def read(*rnames):
@@ -46,7 +46,7 @@ setup(
         'js.jqueryui',
         'js.modernizr',
         'js.tinymce',
-	'js.typeahead',
+        'js.typeahead',
         'setuptools',
     ],
     entry_points={
