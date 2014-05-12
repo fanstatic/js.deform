@@ -8,6 +8,7 @@ from js.jquery import jquery
 from js.jquery_form import jquery_form
 from js.jquery_maskedinput import jquery_maskedinput
 from js.jquery_maskmoney import jquery_maskmoney
+from js.jquery_sortable import jquery_sortable
 from js.jquery_timepicker_addon import timepicker
 from js.jqueryui import ui_autocomplete
 from js.jqueryui import ui_datepicker
@@ -50,6 +51,7 @@ resource_mapping = {
     'jquery.maskMoney': [jquery_maskmoney, ],
     'jquery.maskedinput': [jquery_maskedinput, ],
     'jqueryui': [ui_autocomplete, ui_datepicker, ui_sortable, ],
+    'sortable': [jquery_sortable, ],
     'tinymce': [tinymce, ],
 }
 
