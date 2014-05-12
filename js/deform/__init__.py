@@ -15,6 +15,8 @@ from js.jqueryui import ui_datepicker
 from js.jqueryui import ui_sortable
 from js.modernizr import modernizr
 from js.tinymce import tinymce
+from js.typeahead import typeahead_bootstrap_css
+from js.typeahead import typeahead_js
 from pkg_resources import resource_filename
 
 
@@ -53,6 +55,7 @@ resource_mapping = {
     'jqueryui': [ui_autocomplete, ui_datepicker, ui_sortable, ],
     'sortable': [jquery_sortable, ],
     'tinymce': [tinymce, ],
+    'typeahead': [typeahead_js, typeahead_bootstrap_css],
 }
 
 
