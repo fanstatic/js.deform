@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+2.0a2 2014-05-13
+----------------
+
+-   Depend on deform 2.0a2 (Bootstrap 3).
+    THIS IS NOT BACKWARD COMPATIBLE AND WILL BREAK WITH OLDER DEFORMS!
+
 0.9.8 - 2013-11-19
 ------------------
 

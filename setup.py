@@ -5,7 +5,7 @@ import os
 from setuptools import find_packages
 from setuptools import setup
 
-version = '0.9.8'
+version = '2.0a2'
 
 
 def read(*rnames):
@@ -35,16 +35,18 @@ setup(
     zip_safe=False,
     setup_requires=[],
     install_requires=[
-        'deform',
+        'deform>=2.0a',
         'fanstatic',
         'js.jquery',
         'js.jquery_form',
         'js.jquery_maskedinput',
         'js.jquery_maskmoney',
+        'js.jquery_sortable',
         'js.jquery_timepicker_addon',
         'js.jqueryui',
         'js.modernizr',
         'js.tinymce',
+        'js.typeahead',
         'setuptools',
     ],
     entry_points={
