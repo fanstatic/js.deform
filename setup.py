@@ -46,7 +46,6 @@ setup(
         'js.jqueryui',
         'js.modernizr',
         'js.tinymce',
-        'js.typeahead',
         'setuptools',
     ],
     entry_points={

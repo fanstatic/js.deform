@@ -15,8 +15,6 @@ from js.jqueryui import ui_datepicker
 from js.jqueryui import ui_sortable
 from js.modernizr import modernizr
 from js.tinymce import tinymce
-from js.typeahead import typeahead_bootstrap_css
-from js.typeahead import typeahead_js
 from pkg_resources import resource_filename
 
 
@@ -30,7 +28,7 @@ library = Library(
 deform_js = Resource(
     library,
     "scripts/deform.js",
-    depends=[jquery])
+    depends=[jquery, ])
 
 deform_form_css = Resource(
     library,
@@ -44,6 +42,15 @@ deform_css = Group([deform_form_css, deform_beautify_css, ])
 deform_basic = Group([deform_form_css, deform_js, ])
 deform = Group([deform_css, deform_js, ])
 
+typeahead_js = Resource(
+    library,
+    'scripts/typeahead.min.js',
+    depends=[jquery, ])
+typeahead_css = Resource(
+    library,
+    'css/typeahead.css')
+typeahead = Group([typeahead_js, typeahead_css])
+
 resource_mapping = {
     'datetimepicker': [timepicker, ],
     'deform': [deform_js, ],
@@ -55,7 +62,7 @@ resource_mapping = {
     'jqueryui': [ui_autocomplete, ui_datepicker, ui_sortable, ],
     'sortable': [jquery_sortable, ],
     'tinymce': [tinymce, ],
-    'typeahead': [typeahead_js, typeahead_bootstrap_css],
+    'typeahead': [typeahead, ],
 }
 
 

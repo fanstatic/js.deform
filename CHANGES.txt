@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+2.0a2-1 2014-05-13
+------------------
+
+-   Use the typeahead bundled with deform instead of ``js.typeahead`` as the
+    latter fails on Python 2.6.
+
 2.0a2 2014-05-13
 ----------------
 
