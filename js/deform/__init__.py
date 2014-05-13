@@ -46,7 +46,7 @@ deform = Group([deform_css, deform_js, ])
 
 resource_mapping = {
     'datetimepicker': [timepicker, ],
-    'deform': [deform, ],
+    'deform': [deform_js, ],
     'modernizr': [modernizr, ],
     'jquery': [jquery, ],
     'jquery.form': [jquery_form, ],
