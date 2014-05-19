@@ -42,6 +42,10 @@ deform_css = Group([deform_form_css, deform_beautify_css, ])
 deform_basic = Group([deform_form_css, deform_js, ])
 deform = Group([deform_css, deform_js, ])
 
+modernizr = Resource(
+    library,
+    'scripts/modernizr.custom.input-types-and-atts.js')
+
 typeahead_js = Resource(
     library,
     'scripts/typeahead.min.js',
@@ -50,6 +54,41 @@ typeahead_css = Resource(
     library,
     'css/typeahead.css')
 typeahead = Group([typeahead_js, typeahead_css])
+
+pickadate_js_legacy = Resource(
+    library,
+    'pickadate/legacy.js')
+pickadate_js_base = Resource(
+    library,
+    'pickadate/picker.js',
+    depends=[pickadate_js_legacy, ])
+pickadate_js_date = Resource(
+    library,
+    'pickadate/picker.date.js',
+    depends=[pickadate_js_base, ])
+pickadate_js_time = Resource(
+    library,
+    'pickadate/picker.time.js',
+    depends=[pickadate_js_base, ])
+pickadate_js = Group([
+    pickadate_js_date,
+    pickadate_js_time, ])
+pickadate_css_base = Resource(
+    library,
+    'pickadate/themes/default.css')
+pickadate_css_date = Resource(
+    library,
+    'pickadate/themes/default.date.css',
+    depends=[pickadate_css_base, ])
+pickadate_css_time = Resource(
+    library,
+    'pickadate/themes/default.time.css',
+    depends=[pickadate_css_base, ])
+pickadate_css = Group([
+    pickadate_css_date,
+    pickadate_css_time, ])
+
+pickadate = Group([pickadate_js, pickadate_css, ])
 
 resource_mapping = {
     'datetimepicker': [timepicker, ],
@@ -60,6 +99,8 @@ resource_mapping = {
     'jquery.maskMoney': [jquery_maskmoney, ],
     'jquery.maskedinput': [jquery_maskedinput, ],
     'jqueryui': [ui_autocomplete, ui_datepicker, ui_sortable, ],
+    'modernizr': [modernizr, ],
+    'pickadate': [pickadate, ],
     'sortable': [jquery_sortable, ],
     'tinymce': [tinymce, ],
     'typeahead': [typeahead, ],
