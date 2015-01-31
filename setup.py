@@ -5,7 +5,7 @@ import os
 from setuptools import find_packages
 from setuptools import setup
 
-version = '2.0a2-2'
+version = '2.0a2-3dev'
 
 
 def read(*rnames):
@@ -25,8 +25,8 @@ setup(
     long_description=long_description,
     classifiers=[],
     keywords='',
-    author='Andreas Kaiser',
-    author_email='disko@binary-punks.com',
+    author='Kotti developers',
+    author_email='kotti@googlegroups.com',
     url='https://github.com/Kotti/js.deform',
     license='BSD',
     packages=find_packages(),
@@ -45,6 +45,7 @@ setup(
         'js.jquery_timepicker_addon',
         'js.jqueryui',
         'js.modernizr',
+        'js.select2',
         'js.tinymce',
         'setuptools',
     ],

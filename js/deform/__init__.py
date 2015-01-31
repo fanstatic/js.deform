@@ -14,6 +14,7 @@ from js.jqueryui import ui_autocomplete
 from js.jqueryui import ui_datepicker
 from js.jqueryui import ui_sortable
 from js.modernizr import modernizr
+from js.select2 import select2
 from js.tinymce import tinymce
 from pkg_resources import resource_filename
 
@@ -101,6 +102,7 @@ resource_mapping = {
     'jqueryui': [ui_autocomplete, ui_datepicker, ui_sortable, ],
     'modernizr': [modernizr, ],
     'pickadate': [pickadate, ],
+    'select2': [select2, ],
     'sortable': [jquery_sortable, ],
     'tinymce': [tinymce, ],
     'typeahead': [typeahead, ],
