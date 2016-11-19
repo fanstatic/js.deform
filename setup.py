@@ -57,6 +57,8 @@ setup(
             'pytest-cov',
             'pytest-pep8!=1.0.3',
             'pytest-warnings',
+            'setuptools-git',
+            'tox',
         ],
     },
     entry_points={
