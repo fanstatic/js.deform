@@ -1,0 +1,24 @@
+# DO NOT USE THIS TO INSTALL THE PACKAGE'S REQUIREMENTS!
+# This file only exists to make requires.io automatically open a pull request
+# and Travis run the test suite on that PR whenever a new version of any
+# requirement has been released.
+# See https://requires.io/github/fanstatic/js.deform/requirements/?branch=master
+Chameleon==2.25
+colander==1.3.1
+deform==2.0.2
+fanstatic==0.16
+iso8601==0.1.11
+js.jquery==1.9.1
+js.jquery-form==3.9
+js.jquery-maskedinput==1.3.1
+js.jquery-maskmoney==1.4.1
+js.jquery-sortable==0.9.12
+js.jquery-timepicker-addon==1.5.3
+js.jqueryui==1.10.3
+js.modernizr==2.5.3.1
+js.select2==3.4.1
+js.tinymce==4.2.7
+peppercorn==0.5
+translationstring==1.3
+WebOb==1.6.3
+zope.deprecation==4.2.0
