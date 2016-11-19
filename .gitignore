@@ -9,3 +9,4 @@ lib
 .pip.log
 pyvenv.cfg
 .tox
+.python-version

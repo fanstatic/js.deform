@@ -1,15 +1,18 @@
 version = 3.5
 python = python$(version)
 
+test-all: bin/py.test
+	bin/tox
+
 test: bin/py.test
-	bin/py.test -q
+	bin/py.test
 
 bin/py.test: .pip.log *.py *.cfg
-	bin/pip install -e ".[testing]"
+	bin/python setup.py dev
 	@touch $@
 
 .pip.log: bin/python
-	bin/pip install -e "." --log .pip.log
+	bin/python setup.py develop
 
 bin/python:
 	# virtualenv-$(version) .
@@ -17,6 +20,6 @@ bin/python:
 	@touch $@
 
 clean:
-	@rm -rfv bin/ include/ lib/ share/ .Python
+	@rm -rf bin/ include/ lib/ share/ .Python .tox
 
 .PHONY: test clean
