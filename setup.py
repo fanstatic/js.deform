@@ -5,7 +5,7 @@ import os
 from setuptools import find_packages
 from setuptools import setup
 
-version = '2.0a2-4dev'
+version = '2.0a2.post4.dev0'
 
 
 def read(*rnames):
@@ -23,12 +23,26 @@ setup(
     version=version,
     description="Fanstatic packaging of deform",
     long_description=long_description,
-    classifiers=[],
     keywords='',
     author='Fanstatic developers',
     author_email='kotti@googlegroups.com',
     url='https://github.com/fanstatic/js.deform',
     license='BSD',
+    classifiers=[
+        "Development Status :: 6 - Mature",
+        "Intended Audience :: Developers",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Programming Language :: Python :: Implementation :: PyPy",
+        "Framework :: Pyramid",
+        "Topic :: Internet :: WWW/HTTP",
+        "Topic :: Internet :: WWW/HTTP :: WSGI",
+        "License :: BSD",
+    ],
     packages=find_packages(),
     namespace_packages=['js'],
     include_package_data=True,
