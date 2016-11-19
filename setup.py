@@ -25,9 +25,9 @@ setup(
     long_description=long_description,
     classifiers=[],
     keywords='',
-    author='Kotti developers',
+    author='Fanstatic developers',
     author_email='kotti@googlegroups.com',
-    url='https://github.com/Kotti/js.deform',
+    url='https://github.com/fanstatic/js.deform',
     license='BSD',
     packages=find_packages(),
     namespace_packages=['js'],
@@ -49,6 +49,16 @@ setup(
         'js.tinymce',
         'setuptools',
     ],
+    extras_require={
+        'testing': [
+            'pyramid',
+            'pyramid_chameleon',
+            'pytest>=3.0.0',
+            'pytest-cov',
+            'pytest-pep8!=1.0.3',
+            'pytest-warnings',
+        ],
+    },
     entry_points={
         'fanstatic.libraries': [
             'deform = js.deform:library',

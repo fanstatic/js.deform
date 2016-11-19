@@ -96,7 +96,7 @@ So we can now see the resources that have been included:
 
   >>> needed = fanstatic.get_needed()
   >>> needed.resources()
-  set([<Resource 'tinymce.js' in library 'tinymce'>, <Resource 'scripts/deform.js' in library 'deform'>, <Resource 'jquery.js' in library 'jquery'>])
+  [<Resource 'jquery.js' in library 'jquery'>, <Resource 'tinymce.js' in library 'tinymce'>, <Resource 'scripts/deform.js' in library 'deform'>]
 
 The above resources will automatically be included on your page once
 Fanstatic is configured accordingly.
@@ -134,8 +134,8 @@ the ``need()`` calls are not issued before rendering the form.
   >>> form = deform.Form(schema)
   >>> needed = fanstatic.get_needed()
   >>> needed.resources()
-  set([])
+  []
   >>> html = form.render()
   >>> needed = fanstatic.get_needed()
   >>> needed.resources()
-  set([<Resource 'tinymce.js' in library 'tinymce'>, <Resource 'scripts/deform.js' in library 'deform'>, <Resource 'jquery.js' in library 'jquery'>])
+  [<Resource 'jquery.js' in library 'jquery'>, <Resource 'tinymce.js' in library 'tinymce'>, <Resource 'scripts/deform.js' in library 'deform'>]

@@ -1,0 +1,14 @@
+language: python
+sudo: false
+cache:
+  directories:
+    - $HOME/.cache/pip
+before_cache:
+  - rm -f $HOME/.cache/pip/log/debug.log
+python:
+  - "2.7"
+install:
+  - travis_retry pip install -U pip wheel setuptools
+  - pip install -e .[testing]
+script:
+  - py.test -rw --tb=native --cov=js.deform --cov-report=term-missing
