@@ -2,3 +2,11 @@
 .coverage
 dist
 docs/_build
+bin
+include
+.Python
+lib
+.pip.log
+pyvenv.cfg
+.tox
+.python-version

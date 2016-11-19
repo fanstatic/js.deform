@@ -1,0 +1,16 @@
+language: python
+cache:
+  directories:
+    - $HOME/.cache/pip
+before_cache:
+  - rm -f $HOME/.cache/pip/log/debug.log
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "pypy"
+install:
+  - travis_retry pip install -U pip wheel setuptools
+  - python setup.py develop dev
+script:
+  - py.test -rw --tb=native --cov=js.deform --cov-report=term-missing

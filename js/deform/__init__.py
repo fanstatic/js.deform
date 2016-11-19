@@ -56,6 +56,10 @@ typeahead_css = Resource(
     'css/typeahead.css')
 typeahead = Group([typeahead_js, typeahead_css])
 
+fileupload = Resource(
+    library,
+    'scripts/file_upload.js')
+
 pickadate_js_legacy = Resource(
     library,
     'pickadate/legacy.js')
@@ -94,7 +98,7 @@ pickadate = Group([pickadate_js, pickadate_css, ])
 resource_mapping = {
     'datetimepicker': [timepicker, ],
     'deform': [deform_js, ],
-    'modernizr': [modernizr, ],
+    'fileupload': [fileupload, ],
     'jquery': [jquery, ],
     'jquery.form': [jquery_form, ],
     'jquery.maskMoney': [jquery_maskmoney, ],
