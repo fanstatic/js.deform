@@ -2,3 +2,7 @@
 .coverage
 dist
 docs/_build
+bin
+include
+.Python
+lib
