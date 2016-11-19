@@ -7,3 +7,4 @@ include
 .Python
 lib
 .pip.log
+pyvenv.cfg

@@ -1,5 +1,4 @@
 language: python
-sudo: false
 cache:
   directories:
     - $HOME/.cache/pip
@@ -15,6 +14,6 @@ python:
   - "pypy"
 install:
   - travis_retry pip install -U pip wheel setuptools
-  - pip install -e .[testing]
+  - pip install -e ".[testing]"
 script:
   - py.test -rw --tb=native --cov=js.deform --cov-report=term-missing

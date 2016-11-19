@@ -1,5 +1,5 @@
 
-version = 2.7
+version = 3.5
 python = python$(version)
 
 test: bin/py.test
@@ -10,10 +10,10 @@ bin/py.test: .pip.log *.py *.cfg
 	@touch $@
 
 .pip.log: bin/python
-	bin/pip install -e ".[development]" --log .pip.log
+	bin/pip install -e "." --log .pip.log
 
 bin/python:
-	virtualenv-$(version) .
+	pyvenv-$(version) .
 	@touch $@
 
 clean:
