@@ -8,3 +8,4 @@ include
 lib
 .pip.log
 pyvenv.cfg
+.tox
