@@ -5,7 +5,7 @@ import os
 from setuptools import find_packages
 from setuptools import setup
 
-version = '2.0a2.post4.dev0'
+version = '2.0.3.post0.dev0'
 
 
 def read(*rnames):
@@ -41,7 +41,7 @@ setup(
         "Framework :: Pyramid",
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Internet :: WWW/HTTP :: WSGI",
-        "License :: BSD",
+        "License :: OSI Approved :: BSD License",
     ],
     packages=find_packages(),
     namespace_packages=['js'],
@@ -49,7 +49,7 @@ setup(
     zip_safe=False,
     setup_requires=[],
     install_requires=[
-        'deform>=2.0a',
+        'deform>=2.0.3',
         'fanstatic',
         'js.jquery',
         'js.jquery_form',
