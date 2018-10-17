@@ -3,7 +3,7 @@
 # and Travis run the test suite on that PR whenever a new version of any
 # requirement has been released.
 # See https://requires.io/github/fanstatic/js.deform/requirements/?branch=master
-Chameleon==3.4
+Chameleon==3.5
 colander==1.5.1
 deform==2.0.6
 fanstatic==1.0.0
