@@ -4,7 +4,7 @@
 # requirement has been released.
 # See https://requires.io/github/fanstatic/js.deform/requirements/?branch=master
 Chameleon==3.5
-colander==1.5.1
+colander==1.6.0
 deform==2.0.7
 fanstatic==1.1
 iso8601==0.1.12
