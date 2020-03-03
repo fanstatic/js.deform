@@ -19,17 +19,6 @@ it where you want these resources to be included on a page::
   >>> from js.deform import deform_css
   >>> deform_css.need()
 
-This will include Deform's default ``form.css`` as well as the
-``beautify.css``.  If you only want one or the other, you can
-``need`` them like so::
-
-  >>> from js.deform import deform_form_css
-  >>> deform_form_css.need()
-
-  >>> from js.deform import deform_beautify_css
-  >>> deform_beautify_css.need()
-
-
 All
 ---
 
