@@ -1,0 +1,7 @@
+include *.txt
+include Makefile
+include pytest.ini
+include tox.ini
+recursive-include js *.py
+recursive-include js *.txt
+recursive-include requirements *.txt

@@ -5,15 +5,12 @@ cache:
 before_cache:
   - rm -f $HOME/.cache/pip/log/debug.log
 python:
-  - "2.6"
   - "2.7"
-  - "3.2"
-  - "3.3"
   - "3.4"
   - "3.5"
   - "pypy"
 install:
   - travis_retry pip install -U pip wheel setuptools
-  - pip install -e ".[testing]"
+  - python setup.py develop dev
 script:
   - py.test -rw --tb=native --cov=js.deform --cov-report=term-missing
