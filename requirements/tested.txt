@@ -5,7 +5,7 @@
 # See https://requires.io/github/fanstatic/js.deform/requirements/?branch=master
 Chameleon==3.8.1
 colander==1.8.2
-deform==2.0.12
+deform==2.0.13
 fanstatic==1.1
 iso8601==0.1.12
 js.jquery==3.3.1
