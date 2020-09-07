@@ -5,7 +5,7 @@ import os
 from setuptools import find_packages
 from setuptools import setup
 
-version = '2.0.10.dev0'
+version = '2.0.14.dev0'
 
 
 def read(*rnames):
@@ -32,7 +32,6 @@ setup(
         "Development Status :: 6 - Mature",
         "Intended Audience :: Developers",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
@@ -51,7 +50,7 @@ setup(
     zip_safe=False,
     setup_requires=[],
     install_requires=[
-        'deform >=2.0.3, <2.0.11',
+        'deform >=2.0.11',
         'fanstatic',
         'js.jquery',
         'js.jquery_form',
