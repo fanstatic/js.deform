@@ -5,7 +5,7 @@ import os
 from setuptools import find_packages
 from setuptools import setup
 
-version = '2.0.3.post0.dev0'
+version = '2.0.10.dev0'
 
 
 def read(*rnames):
@@ -34,8 +34,10 @@ setup(
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.4",
-        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
         "Framework :: Pyramid",
