@@ -34,11 +34,8 @@ deform_js = Resource(
 deform_form_css = Resource(
     library,
     "css/form.css")
-deform_beautify_css = Resource(
-    library,
-    "css/beautify.css")
 
-deform_css = Group([deform_form_css, deform_beautify_css, ])
+deform_css = Group([deform_form_css, ])
 
 deform_basic = Group([deform_form_css, deform_js, ])
 deform = Group([deform_css, deform_js, ])
