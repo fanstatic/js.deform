@@ -51,7 +51,7 @@ setup(
     zip_safe=False,
     setup_requires=[],
     install_requires=[
-        'deform>=2.0,<2.1',
+        'deform >=2.0.3, <2.0.11',
         'fanstatic',
         'js.jquery',
         'js.jquery_form',

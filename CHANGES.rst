@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+2.0.10 (unreleased)
+-------------------
+
+- Add support for Python 3.6 up to 3.9 and PyPy3.
+
+- Drop support for Python 3.4 and 3.5
+
+
 2.0.3 - 2016-11-20
 ------------------
 
