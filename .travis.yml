@@ -7,6 +7,8 @@ python:
   - 3.9-dev
   - pypy
   - pypy3
+before_install:
+  - pip freeze | xargs pip uninstall -y
 install:
   - travis_retry pip install -U pip wheel setuptools
   - python setup.py develop dev
