@@ -5,18 +5,18 @@ import os
 from setuptools import find_packages
 from setuptools import setup
 
-version = '2.0.3.post0.dev0'
+version = '2.0.10.dev0'
 
 
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
 long_description = (
-    read('README.txt')
+    read('README.rst')
     + '\n' +
-    read('js', 'deform', 'tests', 'test_deform.txt')
+    read('js', 'deform', 'tests', 'test_deform.rst')
     + '\n' +
-    read('CHANGES.txt'))
+    read('CHANGES.rst'))
 
 setup(
     name='js.deform',
@@ -34,8 +34,10 @@ setup(
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.4",
-        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
         "Framework :: Pyramid",
@@ -49,7 +51,7 @@ setup(
     zip_safe=False,
     setup_requires=[],
     install_requires=[
-        'deform>=2.0.3',
+        'deform>=2.0,<2.1',
         'fanstatic',
         'js.jquery',
         'js.jquery_form',
@@ -67,10 +69,9 @@ setup(
         'testing': [
             'pyramid',
             'pyramid_chameleon',
-            'pytest>=3.0.0',
+            'pytest >= 3.1',
             'pytest-cov',
-            'pytest-pep8!=1.0.3',
-            'pytest-warnings',
+            'pytest-flake8',
             'setuptools-git',
             'tox',
         ],
