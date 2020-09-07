@@ -49,7 +49,7 @@ setup(
     zip_safe=False,
     setup_requires=[],
     install_requires=[
-        'deform>=2.0.3',
+        'deform >=2.0.3, <2.0.11',
         'fanstatic',
         'js.jquery',
         'js.jquery_form',
@@ -67,10 +67,9 @@ setup(
         'testing': [
             'pyramid',
             'pyramid_chameleon',
-            'pytest>=3.0.0',
+            'pytest >= 3.1',
             'pytest-cov',
-            'pytest-pep8!=1.0.3',
-            'pytest-warnings',
+            'pytest-flake8',
             'setuptools-git',
             'tox',
         ],
