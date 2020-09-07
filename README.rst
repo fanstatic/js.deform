@@ -1,6 +1,9 @@
 js.deform
 =========
 
+.. image:: https://travis-ci.org/fanstatic/js.deform.svg?branch=master
+    :target: https://travis-ci.org/fanstatic/js.deform
+
 Introduction
 ------------
 

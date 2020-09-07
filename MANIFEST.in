@@ -1,7 +1,8 @@
+include *.rst
 include *.txt
 include Makefile
 include pytest.ini
 include tox.ini
 recursive-include js *.py
-recursive-include js *.txt
+recursive-include js *.rst
 recursive-include requirements *.txt
