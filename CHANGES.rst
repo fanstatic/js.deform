@@ -1,7 +1,7 @@
 CHANGES
 =======
 
-2.0.14 (unreleased)
+2.0.14 (2020-09-08)
 -------------------
 
 - Add support for Python 3.6 up to 3.9 and PyPy3.
