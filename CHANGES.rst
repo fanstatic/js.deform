@@ -6,7 +6,7 @@ CHANGES
 
 - Add support for Python 3.6 up to 3.9 and PyPy3.
 
-- Drop support for Python 2.7, PyPy2, 3.4 and 3.5
+- Drop support for Python 3.4 and 3.5.
 
 - Adapt to ``deform >= 2.0.11``.
 
